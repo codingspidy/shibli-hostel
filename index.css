@@ -1,0 +1,724 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    /* colors */
+    --clr-dark:#042537;
+    --clr-light:#CAD6FB;
+    --clr-black: #000000;
+    --clr-white: #ffffff;
+    --clr-gray: #676767;
+    --clr-light-gray: #C4C4C4;
+
+    /* font-sizes */
+    --fs-nav-links: 1.2rem;
+    --fs-h3: 1.3rem;
+    --fs-btn: 1.1rem;
+    --fs-social: 1.3rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.3rem;
+    --fs-400: .8rem;
+    --fs-300: 1rem;
+    --fs-200: 0.7rem;
+
+    /* font-families */
+    --ff-sans: 'Poppins', sans-serif;
+}
+
+@media (min-width: 360px) {
+    :root {
+       --fs-nav-links: 1.4rem;
+       --fs-btn: 1.2rem;
+       --fs-600: 1.8rem;
+       --fs-500: 1.5rem;
+       --fs-400: .9rem;
+    }
+}
+
+
+
+@media (min-width: 600px) {
+    :root {
+       --fs-nav-links: 1.7rem;
+       --fs-h3: 1.4rem;
+       --fs-600: 2.1rem;
+       --fs-500: 1.7rem;
+       --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 900px) {
+    :root {
+        /* font-sizes */
+        --fs-nav-links: 1.1rem;
+        --fs-h3: 1.5rem;
+        --fs-social: 1.7rem;
+        --fs-700: 4rem;
+        --fs-600: 2.5rem;
+        --fs-500: 1.8rem;
+        --fs-400: 1.1rem;
+        --fs-200: .8rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 2000px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+
+/* ------------------- */
+/*   Utility classes   */
+/* ------------------- */
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.v-center {
+    align-items: center;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+.w-90 {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.max-w {
+    width: 97%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+
+.gap-lg {gap: 5em;}
+
+.gap-md {gap: 2em;}
+
+.gap {gap: 1em;}
+
+.gap-sm {gap: .5em;}
+
+.m-bottom-lg {margin-bottom: 6em;}
+
+.m-bottom-md {margin-bottom: 3.5em;}
+
+.m-bottom-sm {margin-bottom: .5em;}
+
+
+/* colors */
+
+.bg-light {background-color: var(--clr-light) !important;}
+.bg-dark {background-color: var(--clr-dark) !important;}
+.bg-black {background-color: var(--clr-black);}
+.bg-gray {background-color: var(--clr-gray);}
+.bg-light-gray {background-color: var(--clr-light-gray);}
+
+.txt-dark {color: var(--clr-dark);}
+.txt-white {color: var(--clr-white);}
+.txt-black {color: var(--clr-black);}
+.txt-gray {color: var(--clr-gray);}
+
+
+/* typography */
+.fs-btn {font-size: var(--fs-btn);}
+.fs-social {font-size: var(--fs-social);}
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400);
+        
+    }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+.fs-100 { font-size: var(--fs-100); }
+
+.fw-200 {font-weight: 200;}
+.fw-400 {font-weight: 400;}
+.fw-500 {font-weight: 500;}
+.fw-600 {font-weight: 600;}
+.fw-800 {font-weight: 800;}
+
+.ff-sans {font-family: var(--ff-sans);} 
+.ff-sans-headings {font-family: var(--ff-sans-headings);}
+
+.letter-spacing-2 {letter-spacing: 2.5px;} 
+.letter-spacing-1 {letter-spacing: 1.5px;} 
+
+.uppercase {text-transform: uppercase;}
+
+.txt-italic {font-style: italic;}
+.txt-center {text-align: center;}
+
+/*-------------------  */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins & paddings*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture, 
+div, 
+section,
+img,
+ul,
+li,
+a,
+nav,
+footer {
+    margin: 0; 
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+ul { 
+    list-style: none;
+    padding: 0;
+    margin: 0 !important;
+}
+
+a { 
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+
+a,
+a:focus {
+    text-decoration: none;
+}
+
+/* set up the body */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ff-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    min-height: 100vh;
+ 
+    margin: 0 auto;
+    padding: 0;
+    background: white;
+    color: var(--clr-dark);
+    overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select,
+a {
+    font: inherit;
+    color: inherit;
+}
+ 
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------Reset Bootstrap------------ */
+
+/* carousel controls position fixing */
+
+ .carousel-control-prev,
+.carousel-control-next {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    display: none;
+}
+
+.carousel-control-prev {
+    left: 4%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+ .carousel-control-next {
+    right: 4%;
+    top: 50%;
+    transform: translate(0, -50%);
+} 
+
+.carousel {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* ------------------- */
+/*  ----Components---- */
+/* ------------------- */
+
+
+/* ----Navigation----- */
+
+.header-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1em 0;
+    z-index: 10;
+}
+
+.primary-navbar {
+    align-items: center;
+}
+
+.nav-links {
+    font-size: var(--fs-nav-links);
+}
+
+.nav-links:not(.direction-btn):hover {
+    color: white;
+}
+
+.primary-navbar li{margin-left: 2em;}
+
+.toggle-btn {display: none;}
+
+.direction-btn {
+    border: 2px solid var(--clr-dark);
+    border-radius: 5px;
+    padding: .6em .5em;
+}
+                                                  
+.direction-btn:hover {
+    background: url("images/location-screenshot.png") no-repeat center;
+    background-size: cover;
+    color: var(--clr-dark);
+}
+
+
+/* ---Intro section--- */
+.intro-section {
+    background: linear-gradient(to bottom, rgba(202, 214, 251, .5), rgba(202, 214, 251, 1)), url("images/shibli-campus-bg.png") no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.intro {
+    display: grid;
+    place-items: center;
+    padding-block: 5em;
+    text-align: center;
+    width: 90%;
+    margin-inline: auto;
+}
+
+.intro p {
+    max-width: 47ch;
+    margin-inline: auto;
+} 
+
+/* ---Testimonials section--- */
+
+.testimonials-section {padding-block: 7em;}
+
+.testimonials-section img {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 1000px;
+}
+
+.reviews-para {max-width: 50ch;}
+
+.carousel-inner {
+    padding-block: .5em;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-item {
+    min-height: 20em;
+}
+
+.carousel-indicators {
+    bottom: -2em;
+}
+
+.student-1,
+.student-2,
+.student-3 {
+    display: grid;
+    place-items: center;
+    width: 90%;
+    max-width: 600px;
+    margin-inline: auto;
+    padding: 3em 2em;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
+/* ---Marketing section---  */
+.marketing-section {
+    padding: 4em 0;
+}
+
+.marketing-section p {
+    max-width: 45ch;
+}
+
+.marketing-section img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.marketing-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+/* ----Facilities section---- */
+.facilities-section {
+    padding-top: 3em;
+}
+
+.facilities-section h2 {
+    margin-bottom: 1.7em;
+}
+
+.facilities-section h3 {
+    color: black;
+    text-align: center;
+    font-size: var(--fs-h3);
+    margin-bottom: .4em;
+    width: 90%;
+    margin-inline: auto;
+}
+
+.facilities-section p {
+    color: var(--clr-gray);
+    width: 90%;
+    max-width: 50ch;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+.facilities-section img {
+    width: 100%;
+    max-width: 900px;
+}
+
+
+/* ----Contact section------- */
+.contact-section {
+    padding: 4em 0;
+}
+
+.contact-container {
+    position: relative;
+    background: #001129;
+    color: white;
+    padding: 2em;
+    border-radius: 5px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-container-1st-child {
+    text-align: center;
+    width: 90%;
+    margin-inline: auto;
+} 
+
+.form-container-parent {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    position: relative;
+    border-radius: 5px;
+    padding-block: 2em 1em;
+    padding-inline: 1.5em;
+    width: 99%;
+    max-width: 450px;
+    margin-inline: auto;
+    margin-bottom: 2em;
+}
+
+.form-container .form-group {
+    margin-bottom: 1.5em;
+}
+
+.send-msg-btn {
+    float: right;
+}
+
+.contact-info-div {
+    margin-top: 2em;
+    width: 90%;
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.contact-info-div div:not(.location) {
+    align-items: center;
+}
+
+.location i {
+    position: relative;
+    top: 3px;
+}
+
+.contact-info-div p{
+    font-size: var(--fs-400);
+    max-width: 35ch;
+}
+
+.socials-div {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin-inline: auto;
+    font-size: 1.2rem;
+}
+
+.socials-div a:hover {
+    color: #AEAEAE;
+    position: relative;
+    bottom: 1px;
+}
+
+/* ----------------------------- */
+/* -----MEDIA QUERIES----------- */
+/* ----------------------------- */
+
+/* @media (min-width: 768px) {
+    .carousel {
+        width: 85%;
+    }
+} */
+
+@media (min-width: 900px) {
+
+    .nav-links:not(.direction-btn):hover {
+        color: var(--clr-dark);
+        border-bottom: 2.5px solid var(--clr-dark);
+    }
+
+    .student-1,
+.student-2,
+.student-3 {
+    padding-block: 4em;
+}
+
+.carousel-item {
+    min-height: 21em;
+}
+
+    .carousel-control-prev,
+.carousel-control-next {
+     display: block;
+}
+
+    .marketing-section img {
+        min-width: 450px;
+    }
+
+    .marketing-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3em;
+        text-align: left;
+    }
+
+    .facilities-section {
+        padding-bottom: 3em;
+    }
+
+    .facilities-section img {
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .facilities-main-container {
+        width: 100%;
+    }
+
+    .facilities-1st-child,
+    .facilities-2nd-child {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .facilities-2nd-child-1st-child {
+        order: 2;
+    }
+
+    .form-container-parent{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .socials-div,
+    .contact-info-div,
+    .form-container {
+        margin-inline: 0;
+    }
+   
+    .contact-info-parent {
+        order: -1;
+    }
+
+}
+
+/* Mobile Navigation */
+@media (max-width: 900px) {
+
+    .logo-div {
+        width: 8rem;
+    }
+
+    .nav-links {
+        color: white;
+    }
+
+    .nav-links:hover {
+        color: white;
+        border-color: white;
+    }
+
+    .direction-btn {
+        border-color: white;
+    }
+
+    .primary-navbar li {
+        margin-left: 0;
+    }
+
+    .primary-navbar {
+        background: rgb(202,214,251);
+        background: linear-gradient(to top, rgba(202,214,251,1) 0%, rgba(0,17,41,1) 100%);
+         
+        position: fixed;
+        inset: 0 0 0 0;
+        z-index: 100;
+
+        flex-direction: column;
+        align-items: center;
+        padding-top: min(25vh, 10em);
+        gap: 2.5em;
+        transform: translateX(100%);
+        transition: transform 400ms ease-in-out;
+                
+    }
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navbar {
+            background: hsl(0 0% 0% / 0.5);
+            backdrop-filter: blur(1rem);
+        }
+    }
+
+    .primary-navbar[data-visible = "true"] {
+        transform: translateX(0);
+    }
+
+    .toggle-btn {
+        display: block;
+        position: absolute;
+        top: 1.2em;
+        right: 4%;
+        z-index: 10000;
+        width: 2rem;
+        aspect-ratio: 1;
+        border: none;
+        background: url("images/open-btn.svg") no-repeat center;
+    }
+
+    .toggle-btn[aria-expanded = "true"] {
+        background: url("images/close-btn.svg") no-repeat center;
+        position: fixed;
+    }
+}
