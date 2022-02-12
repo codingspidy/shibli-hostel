@@ -459,6 +459,7 @@ a {
 /* ----Facilities section---- */
 .facilities-section {
     padding-top: 3em;
+    margin-bottom: 4em;
 }
 
 .facilities-section h2 {
@@ -498,9 +499,9 @@ a {
     position: relative;
     background: #001129;
     color: white;
-    padding: 2em;
-    border-radius: 5px;
+    padding: 2em .9em;
     width: 95%;
+    border-radius: 5px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -613,9 +614,9 @@ a {
         text-align: left;
     }
 
-    .facilities-section {
+    /* .facilities-section {
         padding-bottom: 3em;
-    }
+    } */
 
     .facilities-section img {
         width: 90%;
@@ -636,6 +637,11 @@ a {
 
     .facilities-2nd-child-1st-child {
         order: 2;
+    }
+
+    .contact-container {
+        width: 95%;
+        border-radius: 5px;
     }
 
     .form-container-parent{
