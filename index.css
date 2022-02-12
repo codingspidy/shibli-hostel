@@ -475,6 +475,7 @@ a {
 }
 
 .facilities-section p {
+    font-size: var(--fs-400);
     color: var(--clr-gray);
     width: 90%;
     max-width: 50ch;
