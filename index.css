@@ -437,6 +437,7 @@ a {
 /* ---Marketing section---  */
 .marketing-section {
     padding: 4em 0;
+    margin-bottom: 7em;
 }
 
 .marketing-section p {
@@ -463,7 +464,7 @@ a {
 }
 
 .facilities-section h2 {
-    margin-bottom: 1.7em;
+    margin-bottom: 2em;
 }
 
 .facilities-section h3 {
