@@ -437,7 +437,8 @@ a {
 /* ---Marketing section---  */
 .marketing-section {
     padding: 4em 0;
-    margin-bottom: 7em;
+    margin-bottom: 5em;
+    background-color: #CAD6FB;
 }
 
 .marketing-section p {
@@ -464,7 +465,7 @@ a {
 }
 
 .facilities-section h2 {
-    margin-bottom: 2em;
+    margin-bottom: 2.2em;
 }
 
 .facilities-section h3 {
@@ -473,7 +474,7 @@ a {
     font-size: var(--fs-h3);
     margin-bottom: .4em;
     width: 90%;
-    margin-inline: auto;
+    margin-inline: auto; 
 }
 
 .facilities-section p {
@@ -494,6 +495,7 @@ a {
 /* ----Contact section------- */
 .contact-section {
     padding: 4em 0;
+    background-color: #CAD6FB;
 }
 
 .contact-container {
