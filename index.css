@@ -438,7 +438,7 @@ a {
 .marketing-section {
     padding: 4em 0;
     margin-bottom: 5em;
-    background-color: #CAD6FB;
+    background-color: rgb(202, 214, 251);
 }
 
 .marketing-section p {
@@ -495,7 +495,7 @@ a {
 /* ----Contact section------- */
 .contact-section {
     padding: 4em 0;
-    background-color: #CAD6FB;
+    background-color: rgb(202, 214, 251);
 }
 
 .contact-container {
