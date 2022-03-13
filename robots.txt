@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap:https://shibliboyshostel.netlify.app/sitemap.xml
