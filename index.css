@@ -367,9 +367,10 @@ a {
 }
                                                   
 .direction-btn:hover {
-    background: url("images/location-screenshot.jpg") no-repeat center;
-    background-size: cover;
-    color: var(--clr-dark);
+    /* background: url("images/location-screenshot.jpg") no-repeat center;
+    background-size: cover; */
+    background: var(--clr-dark);
+    color: #ffffff;
 }
 
 
