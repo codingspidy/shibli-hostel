@@ -42,7 +42,7 @@
     :root {
        --fs-nav-links: 1.7rem;
        --fs-h3: 1.4rem;
-       --fs-600: 2.1rem;
+       --fs-600: 2rem;
        --fs-500: 1.7rem;
        --fs-400: 1rem;
     }
@@ -55,7 +55,7 @@
         --fs-h3: 1.5rem;
         --fs-social: 1.7rem;
         --fs-700: 4rem;
-        --fs-600: 2.5rem;
+        --fs-600: 2.1rem;
         --fs-500: 1.8rem;
         --fs-400: 1.1rem;
         --fs-200: .8rem;
@@ -585,6 +585,9 @@ a {
 } */
 
 @media (min-width: 900px) {
+    /* .intro-section {
+        background: #FFE8DF;
+    } */
 
     .nav-links:not(.direction-btn):hover {
         color: var(--clr-dark);
