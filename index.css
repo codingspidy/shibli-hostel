@@ -255,6 +255,10 @@
     font-weight: 600;
 }
 
+.fw-700 {
+    font-weight: 700;
+}
+
 .fw-800 {
     font-weight: 800;
 }
@@ -298,6 +302,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
 }
 
 /* Reset margins & paddings*/
@@ -434,11 +440,21 @@ a {
 /* ----Navigation----- */
 
 .header-container {
-    width: 90%;
-    max-width: 1300px;
+    /* background-color: #fff; */
+    /* background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 1em 0;
+    padding: 1em;
     z-index: 10;
+}
+
+.logo-div {
+    width: 10rem;
 }
 
 .primary-navbar {
@@ -451,7 +467,8 @@ a {
 }
 
 .nav-links:not(.direction-btn):hover {
-    color: white;
+    border-color: #001129;
+    color: #001129;
 }
 
 .primary-navbar li {
@@ -463,27 +480,64 @@ a {
 }
 
 .direction-btn {
-    border: 2px solid var(--clr-dark);
+    /* border: 2px solid #fff; */
+    background-color: #001129;
+    color: #fff;
     border-radius: 5px;
-    padding: .6em .5em;
+    padding: .6em .7em;
 }
 
 .direction-btn:hover {
     /* background: url("images/location-screenshot.jpg") no-repeat center;
     background-size: cover; */
-    background: var(--clr-dark);
-    color: #ffffff;
+    opacity: .8;
 }
 
 
 /* ---Intro section--- */
 
 .intro-section {
-    /* background: linear-gradient(to bottom, rgba(202, 214, 251, .5), rgba(202, 214, 251, 1)), url("images/shibli-campus-bg.png") no-repeat center;
-    background-size: cover; */
-    background: url("images/main-bg.jpg") no-repeat center;
-    background-size: cover;
+    position: relative;
     min-height: 100vh;
+    color: #ffffff;
+}
+
+.intro-slider {
+    min-height: 100vh;
+    width: 100vw !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.intro-section .carousel-inner,
+.intro-section .carousel-item {
+    width: 100vw !important;
+    min-height: 100vh;
+    padding: 0 !important;
+}
+
+.intro-img {
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+.intro-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.2);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
+    /* background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px); */
 }
 
 .intro {
@@ -491,13 +545,33 @@ a {
     place-items: center;
     padding-block: 5em;
     text-align: center;
+    margin-top: 20vh;
     width: 90%;
     margin-inline: auto;
 }
 
-.intro p {
-    max-width: 47ch;
+.main-title {
+    font-size: 1.2rem;
+    color: #001129;
+    max-width: 40ch;
+    color: #fff;
     margin-inline: auto;
+}
+
+.main-title div {
+    font-style: italic;
+    color: #001129;
+    font-size: 2rem;
+}
+
+@media (min-width: 900px) {
+
+    .main-title {
+        font-size: 1.7rem;
+    }
+    .main-title div {
+        font-size: 3rem;
+    }
 }
 
 /* ---Testimonials section--- */
@@ -546,10 +620,21 @@ a {
 
 /* ---Marketing section---  */
 .marketing-section {
-    background: url("images/marketing-bg.jpg") no-repeat center;
-    background-size: cover;
+    position: relative;
+    /* background: url("images/main-bg.jpg") no-repeat center center; */
+    /* background-size: cover; */
     padding: 4em 0;
     margin-bottom: 5em;
+}
+
+.marketing-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("images/main-bg.jpg") no-repeat center center;
+    background-size: cover;
 }
 
 .marketing-section p {
@@ -707,10 +792,10 @@ a {
 } */
 
 @media (min-width: 900px) {
-    /* .intro-section {
-        background: url("images/v904-nunny-012-bg.jpg") no-repeat center;
-        background-size: cover;
-    } */
+
+    .header-container {
+        padding-inline: 2em;
+    }
 
     .nav-links:not(.direction-btn):hover {
         color: var(--clr-dark);
@@ -732,13 +817,12 @@ a {
         display: block;
     }
 
-    /* .marketing-section {
-        background: url("images/v904-nunny-012-bg.jpg") no-repeat center bottom;
-        background-size: cover;
-    } */
-
     .marketing-section img {
         min-width: 450px;
+    }
+
+    .marketing-bg {
+        transform: rotate(180deg);
     }
 
     .marketing-container {
@@ -799,7 +883,7 @@ a {
 @media (max-width: 900px) {
 
     .logo-div {
-        width: 8rem;
+        width: 7rem;
     }
 
     .nav-links {
@@ -807,8 +891,8 @@ a {
     }
 
     .nav-links:hover {
-        color: white;
-        border-color: white;
+        color: #001129;
+        border-color: #001129;
     }
 
     .direction-btn {
@@ -820,12 +904,11 @@ a {
     }
 
     .primary-navbar {
-        background: rgb(202, 214, 251);
-        background: linear-gradient(to top, rgba(202, 214, 251, 1) 0%, rgba(0, 17, 41, 1) 100%);
-
+        background-color: #000;
         position: fixed;
         inset: 0 0 0 0;
         z-index: 100;
+        height: 100vh;
 
         flex-direction: column;
         align-items: center;
@@ -835,12 +918,12 @@ a {
         transition: transform 400ms ease-in-out;
     }
 
-    @supports (backdrop-filter: blur(1rem)) {
+    /* @supports (backdrop-filter: blur(1rem)) {
         .primary-navbar {
             background: hsl(0 0% 0% / 0.5);
             backdrop-filter: blur(1rem);
         }
-    }
+    } */
 
     .primary-navbar[data-visible="true"] {
         transform: translateX(0);
@@ -849,10 +932,11 @@ a {
     .toggle-btn {
         display: block;
         position: absolute;
-        top: 1.2em;
+        top: 22px;
+        /* transform: translateY(-50%); */
         right: 4%;
         z-index: 10000;
-        width: 2rem;
+        width: 25px;
         aspect-ratio: 1;
         border: none;
         background: url("images/open-btn.svg") no-repeat center;
